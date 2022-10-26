@@ -24,6 +24,9 @@
       @endif
 
       {!! Form::open(['url' => 'produto/create']) !!}
+      {{  Form::label('categoria', 'Categoria:') }} <br>
+      {{  Form::select('categoria_id',$categorias) }} <br><br>
+
 
       {{  Form::label('nome', 'Nome:') }} <br>
       {{  Form::text('nome') }} <br><br>

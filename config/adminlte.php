@@ -312,26 +312,72 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Usuário',
+            'text'        => 'Usuários',
             'url'         => 'user',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            'label'       => 1,
             'label_color' => 'success', 
+            'submenu' => [ 
+                [
+                    'text' => 'Administrador',
+                    'url'  => 'user',
+                ],
+                [
+                    'text' => 'Gerente',
+                    'url'  => 'user',
+                ],
+                [
+                    'text' => 'Atendente',
+                    'url'  => 'user',
+                ],
+            ],
         ],
         [
             'text'        => 'Profissional',
             'url'         => 'profissional',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            'label'       => 1,
             'label_color' => 'success',
-            'submenu' =>[
-
+       
+        ],
+        [
+            'text'        => 'Serviços',
+            'url'         => 'servico',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 1,
+            'label_color' => 'success',
+            'submenu' => [
                 [
-                    'text'        => 'Serviços',
-                    'url'         => 'servico',
-                    'icon'        => 'far fa-fw fa-file',
-                    'label'       => 4,
-                    'label_color' => 'warning',
+                    'text' => 'Corte Masculino',
+                    'url'  => 'servico',
+                ],
+                [
+                    'text' => 'Selagem Térmica',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Hidratação',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Corte Feminino',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Manicure',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Pedicure',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Corte Feminino',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => '',
+                    'url'  => '#',
                 ],
             ],
         ],

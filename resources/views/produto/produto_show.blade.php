@@ -14,6 +14,7 @@
       <p>Conteúdo</p>
 
       <p><strong>id:</strong> {{ $produto->id                  }}</p>
+      <p><strong>Categoria:</strong> {{ $produto->categoria->nome}}</p>
       <p><strong>nome:</strong> {{ $produto->nome              }}</p>
       <p><strong>quantidade:</strong> {{ $produto->quantidade  }}</p>
       <p><strong>valor:</strong> R$ {{ $produto->valor         }}</p>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use App\Models\Categoria;
 
 class ProdutoController extends Controller
 {
@@ -31,7 +32,9 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        return view('produto.produto_create');
+
+        $categorias =Categoria::pluck('nome','id');
+        return view('produto.produto_create',['categorias'=> $categorias]);
 
     }
 
@@ -49,19 +52,22 @@ class ProdutoController extends Controller
          'nome.required'          => 'O campo :attribute é obrigatório!',
          'nome.min'               => 'O :attribute precisa ter no mínimo :min.',
          'quantidade.required'    => 'O :attribute é obrigatório!',
-         'quantidade.integer'     => 'A :attribute é obrigatória!'
+         'quantidade.integer'     => 'A :attribute é obrigatória!',
+         'categoria_id.required'     => 'O campo categoria é obrigatório!'
         ];
 
             $validated = $request->validate([
                 'nome'         => 'required|min:2',
                 'quantidade'   => 'required|integer',
                 'valor'        => 'required',
+                'categoria_id' => 'required'
         ], $messages);
         
         $produto = new Produto;
         $produto->nome           = $request->nome;
         $produto->quantidade     = $request->quantidade;
         $produto->valor          = $request->valor;
+        $produto->categoria_id   = $request->categoria_id;
         $produto->save();
 
         return redirect('/produto')->with('status', 'Produto criado com sucessso!');

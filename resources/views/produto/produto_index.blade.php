@@ -25,6 +25,7 @@
     <table>
       <tr>
          <th>ID</th>
+         <th>Categoria</th>
          <th>nome</th>
          <th>quantidade</th>
          <th>valor</th>
@@ -37,6 +38,7 @@
     
       <tr>
          <td>{{ $value->id            }}</td>
+         <td>{{ $value->categoria->nome}}</td>
          <td>{{ $value->nome          }}</td>
          <td>{{ $value->quantidade    }}</td>
          <td>{{ $value->valor         }}</td>
