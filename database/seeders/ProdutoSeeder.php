@@ -16,7 +16,7 @@ class ProdutoSeeder extends Seeder
     public function run()
     {
         Produto::create([
-            'nome'          =>'Creme de Hidratação',
+            'nome'          =>'',
             'quantidade'    => 10,
             'valor'         => 123,
             'categoria_id' => 1

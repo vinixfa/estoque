@@ -16,18 +16,18 @@ class ProfissionalSeeder extends Seeder
     public function run()
     {
         Profissional::create([
-            'id'            =>'',
+            
             'nome'          =>'Vinicius',
    
         ]);
 
         Profissional::create([
-            'id'            =>'',
+            
             'nome'          =>'Iago'           
         ]);
 
         Profissional::create([
-            'id'            =>'',
+            
             'nome'          =>'Nayara',
            
         ]);
