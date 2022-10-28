@@ -8,7 +8,6 @@
  <h1 style="text-align: center">Produtos</h1>
 
 
-      <p>Produto - Show </p>
 @endsection
 
 @section('content')

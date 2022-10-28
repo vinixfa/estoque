@@ -24,7 +24,7 @@
       <div class="container col-8">
 
 
-<a class="btn btn-succes" href="{{ url('produto/create') }}">CRIAR</a>
+<a class="btn btn-primary" href="{{ url('produto/create') }}">CRIAR</a>
 
       <p> Conteúdo </p>
       <table class="table  no-margin">
