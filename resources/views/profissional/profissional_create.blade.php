@@ -4,10 +4,11 @@
  
 @section('title', 'Page Title')
  
-@section('sidebar')
-    @parent
+@section('content_header')
+    
+      <h1 style="text-align: center">Criação de Produto</h1>
  
-      <p>Produto - Create</p>
+
 @endsection
 
 @section('content')
@@ -26,7 +27,7 @@
       {!! Form::open(['url' => 'profissional/create']) !!}
 
       {{  Form::label('nome', 'Nome:') }} <br>
-      {{  Form::text('nome') }} <br><br>
+      {{ Form::text('nome', null , ['class' => 'form-control', 'placeholder' => 'Nome do produto'] )}}<br><br>
       
       {{  Form::submit('Enviar') }}
 

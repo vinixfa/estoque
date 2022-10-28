@@ -1,31 +1,62 @@
-<!-- resources/views/produto.create.php -->
+<!-- resources/views/produto.edit.php -->
  
 @extends('adminlte::page')
- 
-@section('title', 'Page Title')
- 
-@section('sidebar')
-    @parent
- 
-      <p>Produto - Edit</p>
-@endsection
+
+@section('title', 'Gardenia - Editar produtos')
+
+@section('content_header')
+    <h1 style="text-align: center">Produtos</h1>
+@stop
 
 @section('content')
-      <p>Formulário</p>
 
-      {!! Form::open(['url' => 'produto/' . $produto->id, 'method' => 'put']) !!}
+<div class="container col-8">
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
 
-      {{  Form::label('nome', 'Nome:') }} <br>
-      {{  Form::text('nome', $produto->nome) }} <br><br>
-
-      {{  Form::label('quantidade', 'Quantidade:') }} <br>
-      {{  Form::text('quantidade',  $produto->quantidade) }} <br><br>
-
-      {{  Form::label('valor', 'Valor:') }} <br>
-      {{  Form::text('valor',  $produto->valor) }} <br><br>
-
-      {{  Form::submit('Enviar') }}
-
-      {!! Form::close() !!}
     
-@endsection
+    {{ Form::model($produto,array('route' => array('produto.update', $produto->id), 'method' => 'PUT')) }}
+
+    <div class="row">
+        <div class="col-6">
+            {{ Form::label('nome', 'Nome do produtos') }}
+            {{ Form::text('nome', $produto->nome , ['class' => 'form-control'] )}}
+        </div>
+        <div class="col-6">
+            {{ Form::label('categoria', 'Categoria' , ['class' => 'form-select ']) }} 
+            {{ Form::select('categoria_id', $categorias, array('class' => 'form-control ')) }} 
+        </div>
+        <div class="col-12">
+            {{ Form::label('descricao', 'Descrição' , ['class' => ' '] ) }}
+            {{ Form::text('descricao', $produto->descricao  , ['class' => 'form-control  '] ) }}
+        </div>
+        <div class="col-4">
+            {{ Form::label('valor', 'valor') }}
+            {{ Form::number('valor', $produto->valor , ['class' => 'form-control ' ,'step'=> 'any'] ) }} 
+        </div>
+       
+    </div>
+    {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2']) }}
+    <a class="btn btn-primary " href="{{URL::to('produto/')}}">Voltar</a>
+    {{ Form::close()  }}
+
+
+
+</div>
+
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

@@ -99,8 +99,8 @@ class ProdutoController extends Controller
     public function edit($id)
     {
         $produto = Produto::find($id);
-        //dd($produto);
-        return view('produto.produto_edit', ['produto' => $produto]);
+        $categorias = Categoria::orderBy('nome','asc')->pluck('nome','id');
+        return view('produto.produto_edit', ['produto' => $produto,'categorias' => $categorias]);
     }
 
     /**

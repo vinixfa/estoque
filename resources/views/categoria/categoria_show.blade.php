@@ -16,7 +16,6 @@
       <p><strong>id:</strong> {{ $categoria->id                  }}</p>
       <p><strong>nome:</strong> {{ $categoria->nome              }}</p>
       <p><strong>quantidade:</strong> {{ $categoria->quantidade  }}</p>
-      <p><strong>valor:</strong> R$ {{ $categoria->valor         }}</p>
       <p><strong>criação:</strong> {{ $categoria->created_at     }}</p>
     
 @endsection

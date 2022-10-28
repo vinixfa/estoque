@@ -330,7 +330,15 @@ return [
                     'text' => 'Atendente',
                     'url'  => 'user',
                 ],
+                
             ],
+        ],
+        [
+            'text'        => 'Produtos',
+            'url'         => 'produto',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 1,
+            'label_color' => 'success', 
         ],
         [
             'text'        => 'Profissional',
