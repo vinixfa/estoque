@@ -2,46 +2,56 @@
  
 @extends('adminlte::page')
  
-@section('title', 'Page Title')
+@section('title', 'Forúm da Beleza')
  
-@section('sidebar')
-    @parent
- 
-      <p> Produto - Index </p>
-@endsection
+@section('content_header')
+  <h1 style="text-align: center">Profissionais</h1>
+   
+@stop
+     
+
 
 @section('content')
-
+    <script>
+      function ConfirmDelete() {
+          return confirm('Tem certeza que deseja excluir este registro?');
+      }
+    </script>
 @if (session('status'))
-    <div class="alert alert-success" role="alert">
-       {{ session('status') }}
-    </div>
+<div class="alert alert-info">{{ Session::get('message') }}</div>
+   
 @endif
+      <div class="container col-8">
 
-<a href="{{ url('profissional/create') }}">CRIAR</a>
 
-      <p> Conteúdo </p>
+<a class="btn btn-primary" href="{{ url('profissional/create') }}">CRIAR</a>
 
-    <table>
-      <tr>
-         <th>nome</th>
-         <th></th>
+
+<table class="table  no-margin">
+     
+  <thead>
+    <tr>
+         <th>Id</th>
+         <th>Nome</th>
+         <th>Profissao</th>
          <th></th>
          <th></th>
       </tr>
-
+    </thead>
+    <tbody>
       @foreach ($profissionais as $value)
     
       <tr>
         <td>{{ $value->id          }}</td>
         <td>{{ $value->nome          }}</td>
+        <td>{{ $value->profissao          }}</td>
       
-         <td><a href="{{ url('profissional/' . $value->id) }}">Visualizar</a></td> 
-         <td><a href="{{ url('profissional/' . $value->id . '/edit') }}">Editar</a></td>
+        <td><a class="btn btn-info" href="{{ URL::to('profissional/' . $value->id) }}">Visualizar</a></td> 
+         <td><a class="btn btn-warning" href="{{ URL::to('profissional/' . $value->id . '/edit') }}"> editar</a></td>
          <td>
           {!! Form::open(['url' => 'profissional/' . $value->id, 'method' => 'delete']) !!}
-          {{  Form::submit('Deletar') }}
-    
+          {{ Form::hidden('_method', 'DELETE') }}
+          {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
           {!! Form::close() !!}
 
         </td>

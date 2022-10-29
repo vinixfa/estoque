@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('servicos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
+            $table->string('servico');
+            $table->string('profissional');
             $table->float('valor');
             $table->timestamps();
         });

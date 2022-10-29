@@ -48,14 +48,17 @@ class ProfissionalController extends Controller
         $messages = [
          'nome.required'          => 'O campo :attribute é obrigatório!',
          'nome.min'               => 'O :attribute precisa ter no mínimo :min.',
+         'profissao.required'    => 'o campo profissao é obrigatório!',
         ];
 
             $validated = $request->validate([
-                'nome'         => 'required|min:2',
+                'nome'                  => 'required|min:2',
+                'profissao.required'    => 'O campo profissao é obrigatório!',
         ], $messages);
         
         $profissional = new Profissional;
         $profissional->nome           = $request->nome;
+        $profissional->profissao      = $request->profissao;
        
         $profissional->save();
 

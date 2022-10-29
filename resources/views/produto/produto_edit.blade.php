@@ -2,7 +2,7 @@
  
 @extends('adminlte::page')
 
-@section('title', 'Gardenia - Editar produtos')
+@section('title', 'Forúm da Beleza - Editar produtos')
 
 @section('content_header')
     <h1 style="text-align: center">Produtos</h1>
@@ -26,7 +26,7 @@
 
     <div class="row">
         <div class="col-6">
-            {{ Form::label('nome', 'Nome do produtos') }}
+            {{ Form::label('nome', 'Nome do produto') }}
             {{ Form::text('nome', $produto->nome , ['class' => 'form-control'] )}}
         </div>
         <div class="col-6">

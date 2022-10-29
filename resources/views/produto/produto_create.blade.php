@@ -2,7 +2,7 @@
  
 @extends('adminlte::page')
  
-@section('title', 'Forum da Beleza - Criando produto')
+@section('title', 'Forúm da Beleza - Criando produto')
  
 @section('content_header')
     
@@ -28,20 +28,20 @@
 
       {!! Form::open(['url' => 'produto/create']) !!}
       <div class="row">
-         <div class="col-6">
-      {{  Form::label('categoria', 'Categoria:') }} <br>
+         <div class="col-4">
+      {{  Form::label('categoria', 'Categoria') }} <br>
       {{  Form::select('categoria_id',$categorias, null, array('class' =>'form-control')) }} <br><br>
          </div>
       <div class="col-6">
-      {{  Form::label('nome', 'Nome:') }} <br>
+      {{  Form::label('nome', 'Nome') }} <br>
       {{ Form::text('nome', null , ['class' => 'form-control', 'placeholder' => 'Nome do produto'] )}}<br><br>
       </div>
-      <div class="col-12">
-      {{  Form::label('quantidade', 'Quantidade:') }} <br>
-      {{  Form::text('quantidade') }} <br><br>
+      <div class="col-6">
+      {{  Form::label('quantidade', 'Quantidade') }} <br>
+      {{  Form::text('quantidade', null, ['class' => 'form-control']) }} <br><br>
       </div>
-      <div class="col-4">
-      {{  Form::label('valor', 'Valor:') }} <br>
+      <div class="col-1">
+      {{  Form::label('valor', 'Valor') }} <br>
       {{ Form::number('valor', null , ['class' => 'form-control ' ,'step'=> 'any', 'placeholder' => 'R$'] ) }}  <br><br>
          </div>
       </div>

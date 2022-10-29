@@ -2,16 +2,18 @@
  
 @extends('adminlte::page')
  
-@section('title', 'Page Title')
+@section('title', 'Forúm da Beleza - Criando Cliente')
  
-@section('sidebar')
-    @parent
+@section('content_header')
+    
+      <h1 style="text-align: center">Criação de Cliente</h1>
+@stop
  
-      <p>Cliente - Create</p>
-@endsection
+    
 
 @section('content')
-      <p>Formulário</p>
+      
+      <div class="container col-8">
 
       @if ($errors->any())
       <div class="alert alert-danger">
@@ -24,21 +26,35 @@
       @endif
 
       {!! Form::open(['url' => 'cliente/create']) !!}
-
-      {{  Form::label('nome', 'Nome:') }} <br>
-      {{  Form::text('nome') }} <br><br>
-
-      {{  Form::label('cpf', 'CPF:') }} <br>
-      {{  Form::text('cpf') }} <br><br>
-
-      {{  Form::label('telefone', 'Telefone:') }} <br>
-      {{  Form::text('telefone') }} <br><br>
-
-      {{  Form::label('email.', 'E-mail:') }} <br>
-      {{  Form::text('email') }} <br><br>
-      
-      {{  Form::submit('Enviar') }}
-
-      {!! Form::close() !!}
+ <div class="row">
+         <div class="col-4">
+      {{  Form::label('nome', 'Nome') }} <br>
+      {{  Form::text('nome', null , ['class' => 'form-control']) }} <br><br>
+         </div>
+         <div class="col-4">
+      {{  Form::label('cpf', 'CPF') }} <br>
+      {{  Form::text('cpf', null , ['class' => 'form-control']) }} <br><br>
+         </div>
+         <div class="col-4">
+      {{  Form::label('telefone', 'Telefone') }} <br>
+      {{  Form::text('telefone', null , ['class' => 'form-control']) }} <br><br>
+         </div>
+         <div class="col-4">
+      {{  Form::label('email.', 'E-mail') }} <br>
+      {{  Form::text('email', null , ['class' => 'form-control']) }} <br><br>
+         </div>
+         </div>
+         <div class="col-2">
+            {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2']) }}
+            <a class="btn btn-primary " href="{{URL::to('produto/')}}">Voltar</a>
+            </div>
+         {!! Form::close() !!}
     
+         @section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
 @endsection

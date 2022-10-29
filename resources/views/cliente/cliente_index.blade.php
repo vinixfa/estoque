@@ -2,34 +2,42 @@
  
 @extends('adminlte::page')
  
-@section('title', 'Page Title')
+@section('title', 'Forúm da Beleza')
  
-@section('sidebar')
-    @parent
- 
-      <p> Cliente - Index </p>
-@endsection
+@section('content_header')
+  <h1 style="text-align: center">Cliente</h1>
+   
+@stop
+     
+
 
 @section('content')
-
+    <script>
+      function ConfirmDelete() {
+          return confirm('Tem certeza?');
+      }
+    </script>
 @if (session('status'))
-    <div class="alert alert-success" role="alert">
-       {{ session('status') }}
-    </div>
+<div class="alert alert-info">{{ Session::get('message') }}</div>
+   
 @endif
+      <div class="container col-8">
 
-<a href="{{ url('cliente/create') }}">CRIAR</a>
 
-      <p> Conteúdo </p>
+<a class="btn btn-primary" href="{{ url('cliente/create') }}">CRIAR</a>
 
-    <table>
+    
+      <table class="table  no-margin">
+        <thead>
       <tr>
-        <th>id</th>
-        <th>nome</th>
-        <th>cpf</th>
-        <th>telefone</th>
-        <th>email</th>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
       </tr>
+    </thead>
+    <tbody>
 
       @foreach ($clientes as $value)
     
@@ -39,17 +47,21 @@
         <td>{{ $value->cpf}}</td>
         <td>{{ $value->telefone}}</td>
         <td>{{ $value->email}}</td>
-         <td><a href="{{ url('cliente/' . $value->id) }}">Visualizar</a></td> 
-         <td><a href="{{ url('cliente/' . $value->id . '/edit') }}">Editar</a></td>
-         <td>
-          {!! Form::open(['url' => 'cliente/' . $value->id, 'method' => 'delete']) !!}
-          {{  Form::submit('Deletar') }}
-    
-          {!! Form::close() !!}
+        <td><a class="btn btn-info" href="{{ URL::to('cliente/' . $value->id) }}">Visualizar</a></td> 
+        <td><a class="btn btn-warning" href="{{ URL::to('cliente/' . $value->id . '/edit') }}"> editar</a></td>
+        <td>
+         {!! Form::open(['url' => 'cliente/' . $value->id, 'method' => 'delete']) !!}
+         {{ Form::hidden('_method', 'DELETE') }}
+         {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+         {!! Form::close() !!}
 
-        </td>
-      </tr>
-      @endforeach
+       </td>
+     </tr>
 
-    </table>
+
+     @endforeach
+
+
+   </tbody>
+   </table>
 @endsection

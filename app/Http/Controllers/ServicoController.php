@@ -63,8 +63,10 @@ class ServicoController extends Controller
         ], $messages);
         
         $servico = new Servico;
-        $servico->nome           = $request->nome;
-        $servico->valor          = $request->valor;
+        $servico->nome                  = $request->nome;
+        $servico->servico               = $request->servico;
+        $servico->profissional          = $request->profissional;
+        $servico->valor                 = $request->valor;
         $servico->save();
 
         return redirect('/servico')->with('status', 'Servico criado com sucessso!');

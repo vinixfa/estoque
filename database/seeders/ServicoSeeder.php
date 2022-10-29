@@ -16,18 +16,24 @@ class ServicoSeeder extends Seeder
     public function run()
     {
         Servico::create([
-            'nome'          =>'Teclado',
-            'valor'         => 260
+            'nome'                   =>'Teclado',
+            'servico'                =>'Corte de cabelo',
+            'profissional'           =>'Iago',
+            'valor'                  => 260
         ]);
 
         Servico::create([
-            'nome'          =>'Mouse',
-            'valor'         => 150
+            'nome'                   =>'Teclado',
+            'servico'                =>'Barba simples',
+            'profissional'           =>'Vinicius',
+            'valor'                  => 260
         ]);
 
         Servico::create([
-            'nome'          =>'Monitor 29',
-            'valor'         => 2200
+            'nome'                    =>'Teclado',
+            'servico'                 =>'Progressiva',
+            'profissional'            =>'Nayara',
+            'valor'                   => 260
         ]);
     }
 }

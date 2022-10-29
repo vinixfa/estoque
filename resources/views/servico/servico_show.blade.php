@@ -2,23 +2,26 @@
  
 @extends('adminlte::page')
  
-@section('title', 'Page Title')
+@section('title', 'Forúm da Beleza - Criando Seviço')
  
-@section('sidebar')
-    @parent
+@section('content_header')
+    
+      <h1 style="text-align: center">Serviços</h1>
+@stop
  
-      <p>Servico - Show </p>
-@endsection
+    
 
 @section('content')
-      <p>Conteúdo</p>
-
       
-      <p><strong>id:</strong> {{ $servico->id                  }}</p>
-      <p><strong>nome:</strong> {{ $servico->nome              }}</p>
 
-      <p><strong>valor:</strong> R$ {{ $servico->valor         }}</p>
+      <div class="container col-8">
+      <p><strong>Id:</strong> {{ $servico->id                     }}</p>
+      <p><strong>Nome:</strong> {{ $servico->nome                 }}</p>
+      <p><strong>Serviço:</strong> {{ $servico->servico           }}</p>
+      <p><strong>Profissional:</strong> {{ $servico->profissional }}</p>
+      <p><strong>valor:</strong> R$ {{ $servico->valor            }}</p>
+      <p><strong>criação:</strong> {{ $servico->created_at        }}</p>
 
-      <p><strong>criação:</strong> {{ $servico->created_at     }}</p>
-    
+      <a class="btn btn-primary " href="{{URL::to('servico/')}}">Voltar</a>
+      </div>
 @endsection

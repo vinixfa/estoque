@@ -2,17 +2,16 @@
  
 @extends('adminlte::page')
  
-@section('title', 'Page Title')
+@section('title', 'Forúm da Beleza - Criando serviço')
  
-@section('sidebar')
-    @parent
+@section('content_header')
+    
+      <h1 style="text-align: center">Criar Serviço</h1>
+@stop
  
-      <p>Servico - Create</p>
-@endsection
-
 @section('content')
-      <p>Formulário</p>
-
+     
+   <div class="container col-8">
       @if ($errors->any())
       <div class="alert alert-danger">
          <ul>
@@ -22,17 +21,33 @@
          </ul>
       </div>
       @endif
-
       {!! Form::open(['url' => 'servico/create']) !!}
-      {{  Form::label('nome', 'Nome:') }} <br>
-      {{  Form::text('nome') }} <br><br>
+      <div class="row">
+         <div class="col-4">
+     
+      {{  Form::label('nome', 'Nome') }} <br>
+      {{  Form::text('nome',  null, ['class' => 'form-control']) }} <br><br>
+         </div>
 
+         <div class="col-6">
+            {{  Form::label('servico', 'Serviços') }} <br>
+            {{  Form::text('servico', null, ['class' => 'form-control']) }} <br><br>
+         </div>
 
-      {{  Form::label('valor', 'Valor:') }} <br>
-      {{  Form::text('valor') }} <br><br>
-      
-      {{  Form::submit('Enviar') }}
-
+         <div class="col-6">
+            {{  Form::label('profissional', 'Profissional') }} <br>
+            {{  Form::text('profissional' , null , ['class' => 'form-control']) }} <br><br>
+         </div>
+         <div class="col-1">
+      {{  Form::label('valor', 'Valor') }} <br>
+      {{  Form::number('valor', null , ['class' => 'form-control ' ,'step'=> 'any', 'placeholder' => 'R$']) }} <br><br>
+         </div>
+         
+      </div>
+      <div class="col-2">
+         {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2']) }}
+         <a class="btn btn-primary " href="{{URL::to('servico/')}}">Voltar</a>
+         </div>
       {!! Form::close() !!}
     
 @endsection

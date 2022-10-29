@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-      <p>Conteúdo</p>
+     
   <div class="container col-8">
 
       <p><strong>Id:</strong> {{ $produto->id                   }}</p>

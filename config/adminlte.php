@@ -354,40 +354,15 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'label'       => 1,
             'label_color' => 'success',
-            'submenu' => [
-                [
-                    'text' => 'Corte Masculino',
-                    'url'  => 'servico',
-                ],
-                [
-                    'text' => 'Selagem Térmica',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Hidratação',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Corte Feminino',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Manicure',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Pedicure',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Corte Feminino',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => '',
-                    'url'  => '#',
-                ],
-            ],
+            
+        ],
+        [
+            'text'        => 'Cliente',
+            'url'         => 'cliente',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 1,
+            'label_color' => 'success',
+            
         ],
        
         ['header' => 'account_settings'],

@@ -8,7 +8,7 @@
   <h1 style="text-align: center">Produtos</h1>
    
 @stop
-      <p> Produto - Index </p>
+     
 
 
 @section('content')
@@ -26,7 +26,7 @@
 
 <a class="btn btn-primary" href="{{ url('produto/create') }}">CRIAR</a>
 
-      <p> Conteúdo </p>
+    
       <table class="table  no-margin">
         <thead>
       <tr>
