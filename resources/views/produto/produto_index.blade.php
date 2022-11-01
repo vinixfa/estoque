@@ -9,7 +9,7 @@
    
 @stop
      
-
+<link rel="stylesheet" href="/css/style.css">
 
 @section('content')
     <script>

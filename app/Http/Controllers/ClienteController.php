@@ -17,7 +17,7 @@ class ClienteController extends Controller
         //listar todos os cliente
         //dd ('ENTROU NO INDEX');
         $clientes = Cliente::orderBy('nome', 'ASC')->get();
-
+        
         //select * from cliente order by nome asc;
         //dd($cliente);
 

@@ -16,19 +16,19 @@ class CategoriaSeeder extends Seeder
     public function run()
     {
         Categoria::create([
-            'nome'          =>'Creme de Hidratação',
+            'nome'          =>'Cabelo',
             'quantidade'    => 10,
             'valor'         => 260
         ]);
 
         Categoria::create([
-            'nome'          =>'Gel Capilar',
+            'nome'          =>'Rosto',
             'quantidade'    => 5,
             'valor'         => 150
         ]);
 
         Categoria::create([
-            'nome'          =>'Tintura Capilar',
+            'nome'          =>'Unhas',
             'quantidade'    => 20,
             'valor'         => 2200
            

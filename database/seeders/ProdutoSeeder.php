@@ -16,21 +16,21 @@ class ProdutoSeeder extends Seeder
     public function run()
     {
         Produto::create([
-            'nome'          =>'Creme de Hidratação',
+            'nome'          =>'Cabelo',
             'quantidade'    => 10,
             'valor'         => 123,
             'categoria_id' => 1
         ]);
 
         Produto::create([
-            'nome'          =>'Gel Capilar',
+            'nome'          =>'Rosto',
             'quantidade'    => 5,
             'valor'         => 123,
             'categoria_id' => 2
         ]);
 
         Produto::create([
-            'nome'          =>'Tintura Capilar',
+            'nome'          =>'Unhas',
             'quantidade'    => 20,
             'valor'         => 123,
             'categoria_id' => 3

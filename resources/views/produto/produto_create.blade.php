@@ -36,11 +36,11 @@
       {{  Form::label('nome', 'Nome') }} <br>
       {{ Form::text('nome', null , ['class' => 'form-control', 'placeholder' => 'Nome do produto'] )}}<br><br>
       </div>
-      <div class="col-6">
+      <div class="col-2">
       {{  Form::label('quantidade', 'Quantidade') }} <br>
       {{  Form::text('quantidade', null, ['class' => 'form-control']) }} <br><br>
       </div>
-      <div class="col-1">
+      <div class="col-2">
       {{  Form::label('valor', 'Valor') }} <br>
       {{ Form::number('valor', null , ['class' => 'form-control ' ,'step'=> 'any', 'placeholder' => 'R$'] ) }}  <br><br>
          </div>
