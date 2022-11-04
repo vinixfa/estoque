@@ -9,7 +9,7 @@
    
 @stop
      
-<link rel="stylesheet" href="/css/style.css">
+
 
 @section('content')
     <script>
@@ -26,7 +26,7 @@
 
 <a class="btn btn-primary" href="{{ url('produto/create') }}">CRIAR</a>
 
-    
+
       <table class="table  no-margin">
         <thead>
       <tr>

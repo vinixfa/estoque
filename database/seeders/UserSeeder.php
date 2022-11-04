@@ -20,23 +20,7 @@ class UserSeeder extends Seeder
             'name'          =>'Teclado',
             'cpf'           => 12345678912,
             'email'         =>'iago1delas@hotmail.com',
-            'telefone'      => 31093120,
-            'password'      => Hash::make('123456')
-        ]);
-
-        User::create([
-            'name'          =>'Teclado',
-            'cpf'           => 12345678912,
-            'email'        => 'iago15delas@hotmail.com',
-            'telefone'      => 31093120,
-            'password'      => Hash::make('123456')
-        ]);
-
-        User::create([
-            'name'          =>'Teclado',
-            'cpf'           => 12345678912,
-            'email'        => 'iago17delas@hotmail.com',
-            'telefone'      => 31093120,
+            'telefone'      => 2199999999,
             'password'      => Hash::make('123456')
         ]);
 
