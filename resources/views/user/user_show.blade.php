@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-      <p>Conteúdo</p>
+<div class="container col-8">
 
       <p><strong>ID:</strong> {{ $user->id}}</p>
       <p><strong>Nome:</strong> {{ $user->nome}}</p>
@@ -19,7 +19,7 @@
       <p><strong>Telefone:</strong> {{ $user->telefone}}</p>
       <p><strong>E-mail:</strong> {{ $user->email}}</p>
 
-      
-
+      <a class="btn btn-primary " href="{{URL::to('profissional/')}}">Voltar</a>
+</div>
     
 @endsection

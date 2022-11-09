@@ -19,9 +19,10 @@ class UserSeeder extends Seeder
         User::create([
             'name'          =>'Teclado',
             'cpf'           => 12345678912,
-            'email'         =>'iago1delas@hotmail.com',
+            'email'         =>'iago1delas@gmail.com',
             'telefone'      => 2199999999,
-            'password'      => Hash::make('123456')
+            'password'      => Hash::make('123456'),
+            'perfil'    => 'admin'
         ]);
 
     }
