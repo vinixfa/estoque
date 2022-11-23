@@ -219,10 +219,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //*-------------------------FIM DA ROTA SERVICO------------------------------------------*//
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
