@@ -307,6 +307,11 @@ return [
             'text' => 'search',
         ],
         [
+            'text' => 'SoApareceParaAdmin',
+            'url'  => 'qualquercoisa',
+            'can'  => 'is_admin',
+        ],
+        [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
