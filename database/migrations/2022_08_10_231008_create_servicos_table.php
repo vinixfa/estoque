@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('servico');
             $table->string('profissional');
             $table->float('valor');
+            $table->string('agendamento');
             $table->timestamps();
         });
     }

@@ -16,16 +16,16 @@ class SalaoSeeder extends Seeder
     public function run()
     {
         Salao::create([
-            'nome'          =>'Teclado'
+            'nome'          =>'Vinicius'
 
         ]);
 
         Salao::create([
-            'nome'          =>'Mouse'
+            'nome'          =>'Iago'
         ]);
 
         Salao::create([
-            'nome'          =>'Monitor 29'
+            'nome'          =>'Nayara'
         ]);
 
     }

@@ -38,9 +38,15 @@
             {{  Form::label('profissional', 'Profissional') }} <br>
             {{  Form::text('profissional' , null , ['class' => 'form-control']) }} <br><br>
          </div>
+         
          <div class="col-1">
       {{  Form::label('valor', 'Valor') }} <br>
       {{  Form::number('valor', null , ['class' => 'form-control ' ,'step'=> 'any', 'placeholder' => 'R$']) }} <br><br>
+         </div>
+
+         <div class="col-6">
+            {{  Form::label('agendamento', 'Agendamento') }} <br>
+            {{  Form::text('agendamento' , null , ['class' => 'form-control']) }} <br><br>
          </div>
          
       </div>

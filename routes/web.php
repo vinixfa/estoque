@@ -85,7 +85,7 @@ Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name(
 //*--------------------------------INICIO DA ROTA USUARIO------------------------------------------*//
 
 //INDEX
-Route::get('/user', [UserController::class, 'index'])->name('user.index');
+Route::get('/user', [UserController::class, 'index'])->name('user.index');//->middleware('can:is_admin'); 
 
 //CREATE
 Route::get('user/create', [UserController::class, 'create'])->name('user.create');

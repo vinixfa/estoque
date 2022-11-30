@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Servico;
+use Illuminate\Support\Str;
 
 class ServicoController extends Controller
 {
@@ -54,19 +55,23 @@ class ServicoController extends Controller
             $validated = $request->validate([
                 'nome'         => 'required|min:3',
                 'valor'        => 'required',
-                'nome.min'               => 'O :attribute precisa ter no mínimo :min.'
+                'nome.min'     => 'O :attribute precisa ter no mínimo :min.'
         ]);
 
             $validated = $request->validate([
                 'nome'         => 'required|min:2',
 
         ], $messages);
-        
+
+        $data = Str::substr($request->agendamento, 6, 4) . '-' . Str::substr($request->agendamento, 3, 2) . '-' . Str::substr($request->agendamento, 0, 2);
+        //dd($data);
+
         $servico = new Servico;
         $servico->nome                  = $request->nome;
         $servico->servico               = $request->servico;
         $servico->profissional          = $request->profissional;
         $servico->valor                 = $request->valor;
+        $servico->agendamento           = $data;
         $servico->save();
 
         return redirect('/servico')->with('status', 'Servico criado com sucessso!');
@@ -111,11 +116,22 @@ class ServicoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //dd('UPDATE')
+     
+     //dd($request->agendamento);
+     
+       // $data = Str::substr($request->agendamento, 6, 4) . '-' . Str::substr($request->agendamento, 3, 2) . '-' . Str::substr($request->agendamento, 0, 2);
+        //dd($data);
+
         $servico = Servico::find($id);
-        $servico->nome          = $request->nome;
-        $servico->valor         = $request->valor;
+        $servico->nome                  = $request->nome;
+        $servico->servico               = $request->servico;
+        $servico->profissional          = $request->profissional;
+        $servico->valor                 = $request->valor;
+        $servico->agendamento           = $request->agendamento;
         $servico->save();
+
+        //dd('UPDATE')
+       
 
         return redirect('/servico')->with('status', 'Servico atualizado com sucesso!');
     }

@@ -34,8 +34,8 @@
             {{ Form::select('categoria_id', $categorias, array('class' => 'form-control ')) }} 
         </div>
         <div class="col-12">
-            {{ Form::label('descricao', 'Descrição' , ['class' => ' '] ) }}
-            {{ Form::text('descricao', $produto->descricao  , ['class' => 'form-control  '] ) }}
+            {{ Form::label('quantidade', 'Quantidade' , ['class' => ' '] ) }}
+            {{ Form::text('quantidade', $produto->quantidade  , ['class' => 'form-control  '] ) }}
         </div>
         <div class="col-4">
             {{ Form::label('valor', 'valor') }}

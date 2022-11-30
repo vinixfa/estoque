@@ -117,6 +117,7 @@ class ProdutoController extends Controller
         $produto->nome          = $request->nome;
         $produto->quantidade    = $request->quantidade;
         $produto->valor         = $request->valor;
+        $produto->categoria_id  = $request->categoria_id;
         $produto->save();
 
         return redirect('/produto')->with('status', 'Produto atualizado com sucesso!');

@@ -35,6 +35,8 @@
          <th>Serviços</th>
          <th>Profissional</th>
          <th>Valor</th>
+         <th>Agendamento</th>
+
 
          <th></th>
          <th></th>
@@ -49,6 +51,7 @@
         <td>{{ $value->servico       }}</td>
         <td>{{ $value->profissional  }}</td>
         <td>{{ $value->valor         }}</td>
+        <td>{{ $value->agendamento   }}</td>
         <td><a class="btn btn-info" href="{{ URL::to('servico/' . $value->id) }}">Visualizar</a></td> 
         <td><a class="btn btn-warning" href="{{ URL::to('servico/' . $value->id . '/edit') }}"> editar</a></td>
         <td>

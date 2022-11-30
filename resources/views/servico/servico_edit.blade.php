@@ -35,10 +35,17 @@
       {{  Form::label('profissional', 'Profissional') }} <br>
       {{  Form::text('profissional',  $servico->profissional , ['class' => 'form-control']) }} <br><br>
       </div>
+     
       <div class="col-6">
       {{  Form::label('valor', 'Valor') }} <br>
       {{  Form::text('valor',  $servico->valor , ['class' => 'form-control']) }} <br><br>
       </div>
+
+      <div class="col-6">
+        {{  Form::label('agendamento', 'Agendamento') }} <br>
+        {{  Form::date('agendamento',  $servico->agendamento , ['class' => 'form-control']) }} <br><br>
+        </div>
+
       <div class="col-6">
       {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2']) }}
     <a class="btn btn-primary " href="{{URL::to('produto/')}}">Voltar</a>

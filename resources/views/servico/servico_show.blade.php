@@ -19,8 +19,9 @@
       <p><strong>Nome:</strong> {{ $servico->nome                 }}</p>
       <p><strong>Serviço:</strong> {{ $servico->servico           }}</p>
       <p><strong>Profissional:</strong> {{ $servico->profissional }}</p>
-      <p><strong>valor:</strong> R$ {{ $servico->valor            }}</p>
-      <p><strong>criação:</strong> {{ $servico->created_at        }}</p>
+      <p><strong>Valor:</strong> R$ {{ $servico->valor            }}</p>
+      <p><strong>Agendamento:</strong> {{ $servico->agendamento   }}</p>
+      <p><strong>Criação:</strong> {{ $servico->created_at        }}</p>
 
       <a class="btn btn-primary " href="{{URL::to('servico/')}}">Voltar</a>
       </div>
