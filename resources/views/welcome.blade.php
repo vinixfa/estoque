@@ -20,10 +20,9 @@
             }
 
         </style>
-      </head>
-    <body class="antialiased">
-
-    <!------- login----------------->
+    </head>
+<body class="antialiased">
+    <!------- NAVBAR-------->
     <nav class="navbar navbar-expand-lg 
         navbar-black bg-black shadow-lg p-3">
   
@@ -73,26 +72,15 @@
             </ul>
         </div>
     </nav>
-  
-            <!------- fim do login----------------->
-            
-                        <div id="cont_video">
-                           <video autoplay="true" id="myVideo" loop="true" muted="true">
-                            <h1>TESTE</h1>
-                              <source src="https://cdn-production.beautydate.com.br/assets/home_v-7e084df0370f4eec6be7e18aa0c1e4195529d7a74f7ae003d15fde7dd8e4dc2a.mp4" type="video/mp4">
-                              <source src="https://cdn-production.beautydate.com.br/assets/home_v-66a76a96156e1e26aa5d2e535974e36a7293b54ea888abbd1b6ced78b667eb97.webm" type="video/webm">
-                           </video>
-                        </div>
-                </div>
-            <!-------fim imagem----------------->
-            <!-------.......----------->
-                
-            <!------- login----------------->
-                  
-            <!------- login----------------->
+            <!-------FIM---NAVBAR-------->
 
-
-                
-    </body>
-   
-</html>
+            <!------- BACKGROUND-------->
+     <div id="cont_video">
+         <video autoplay="true" id="myVideo" loop="true" muted="true">
+             <source src="https://cdn-production.beautydate.com.br/assets/home_v-7e084df0370f4eec6be7e18aa0c1e4195529d7a74f7ae003d15fde7dd8e4dc2a.mp4" type="video/mp4">
+             <source src="https://cdn-production.beautydate.com.br/assets/home_v-66a76a96156e1e26aa5d2e535974e36a7293b54ea888abbd1b6ced78b667eb97.webm" type="video/webm">
+          </video>
+     </div>
+<!--------FIM---BACKGROUND-------->        
+</body>
+ </html>
